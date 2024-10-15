@@ -37,7 +37,10 @@ context('Product List Page', () => {
                                 cy.get('h1').should('include.text', '1').and('include.text',city.name);
                             }
                         });
-                        cy.wrap($el).contains('ستاره').click({timeout: 60000})
+                        cy.wrap($el).contains('ستاره').click().then(()=>{
+                            // here is there
+                            // continue;
+                        })
                     })
                     })
             });
